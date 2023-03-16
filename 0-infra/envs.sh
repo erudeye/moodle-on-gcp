@@ -17,13 +17,13 @@
 # make changes to your project, region, zone and networking resources
 # ip ranges here described are suggestive and can be adjusted to fit production's needs
 
-PROJECT_NUMBER=347423586521
-PROJECT_ID=moodle-unnes
+PROJECT_NUMBER=1000191964739
+PROJECT_ID=lms-unnes
 REGION=asia-southeast2
 ZONE=$REGION-a
 
-VPC_NAME=unnes-vpc
-SUBNET_NAME=unnes-subnet
+VPC_NAME=unnes-lms-vpc
+SUBNET_NAME=unnes-lms-subnet
 SUBNET_RANGE=10.10.0.0/24
 
 # gke specific variables
@@ -43,17 +43,17 @@ MOODLE_MYSQL_MANAGED_PEERING_RANGE=10.9.0.0
 MOODLE_FILESTORE_MANAGED_PEERING_RANGE=10.12.0.0
 
 # NAT config
-NAT_CONFIG=unnes-nat-cfg
-NAT_ROUTER=unnes-nat-router
+NAT_CONFIG=unnes-lms-nat-config-name
+NAT_ROUTER=unnes-lms-nat-config-router
 
 # db specific variables
-GKE_NAME=unnes-gke-cluster
-MYSQL_INSTANCE_NAME=unnes-mysql-instance
-MYSQL_ROOT_PASSWORD=Unn3snOJI232^e
-MYSQL_DB=unnesdb
+GKE_NAME=unnes-lms-gke
+MYSQL_INSTANCE_NAME=unnes-lms-mysql-instance
+MYSQL_ROOT_PASSWORD=uT5zYUnK4iP7
+MYSQL_DB=unnes-lms
 MYSQL_MOODLE_DB_CHARSET=utf8mb4 #recommended collation for Moodle. Change only if necessary.
 MYSQL_MOODLE_DB_COLLATION=utf8mb4_unicode_ci #recommended collation for Moodle. Change only if necessary.
 
 # other managed services variables
-REDIS_NAME=unnes-redis
-FILESTORE_NAME=unnes-filestore
+REDIS_NAME=unnes-lms-redis
+FILESTORE_NAME=unnes-lms-filestore
