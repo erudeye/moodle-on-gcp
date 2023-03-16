@@ -17,13 +17,13 @@
 # make changes to your project, region, zone and networking resources
 # ip ranges here described are suggestive and can be adjusted to fit production's needs
 
-PROJECT_NUMBER=<YOUR-PROJECT-NUMBER>
-PROJECT_ID=<YOUR-PROJECT-ID>
-REGION=<YOUR-PREFERED-REGION>
+PROJECT_NUMBER=347423586521
+PROJECT_ID=moodle-unnes
+REGION=asia-southeast2
 ZONE=$REGION-a
 
-VPC_NAME=<YOUR-VPC-NAME>
-SUBNET_NAME=<YOUR-SUBNET-NAME>
+VPC_NAME=unnes-vpc
+SUBNET_NAME=unnes-subnet
 SUBNET_RANGE=10.10.0.0/24
 
 # gke specific variables
@@ -43,17 +43,17 @@ MOODLE_MYSQL_MANAGED_PEERING_RANGE=10.9.0.0
 MOODLE_FILESTORE_MANAGED_PEERING_RANGE=10.12.0.0
 
 # NAT config
-NAT_CONFIG=<YOUR-NAT-CONFIG-NAME>
-NAT_ROUTER=<YOUR-NAT-CONFIG-ROUTER>
+NAT_CONFIG=unnes-nat-cfg
+NAT_ROUTER=unnes-nat-router
 
 # db specific variables
-GKE_NAME=<YOUR-GKE-CLUSTER-NAME>
-MYSQL_INSTANCE_NAME=<YOUR-MYSQL-INSTANCE-NAME>
-MYSQL_ROOT_PASSWORD=<YOUR-MYSQL-INSTANCE-PASSWORD>
-MYSQL_DB=<YOUR-MOODLE-DB-NAME>
+GKE_NAME=unnes-gke-cluster
+MYSQL_INSTANCE_NAME=unnes-mysql-instance
+MYSQL_ROOT_PASSWORD=Unn3snOJI232^e
+MYSQL_DB=unnesdb
 MYSQL_MOODLE_DB_CHARSET=utf8mb4 #recommended collation for Moodle. Change only if necessary.
 MYSQL_MOODLE_DB_COLLATION=utf8mb4_unicode_ci #recommended collation for Moodle. Change only if necessary.
 
 # other managed services variables
-REDIS_NAME=<YOUR-REDIS-CACHE-NAME>
-FILESTORE_NAME=<YOUR-FILESTORE-NAME>
+REDIS_NAME=unnes-redis
+FILESTORE_NAME=unnes-filestore
